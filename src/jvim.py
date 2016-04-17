@@ -32,7 +32,7 @@ import sys
 from os import path
 
 vimrep = 'https://github.com/vim/vim.git'
-msgcontinue = 'enter y if you wish to continue.'
+msgcontinue = 'enter y if you wish to continue: '
 msgexit = 'Exited at user request!'
 
 def getconf():
@@ -69,9 +69,11 @@ def clonevrep():
 
 
     if path.exists(str(envars['sclone'])):
-        ycontinue = input('clone dir %s already exists' %  envars['sclone'] + msgcontinue)
-        if not ycontinue == 'y':
-            sys.exit(msgexit)               
+        ycontinue = raw_input('clone dir:%s already exists ' %  envars['sclone'] + msgcontinue)
+        if ycontinue.upper() == 'y':
+            return
+        sys.exit(msgexit)
+                           
             
 
     print('cloning to:' + str(envars['sclone']))
