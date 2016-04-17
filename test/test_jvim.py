@@ -31,11 +31,14 @@ os.chdir('\\Users\\Noe\\workspace\\jvim\\src')
 #import jvim
 
 import imp 
-imp.load_source('jvim','\\Users\\Noe\\workspace\\jvim\src\jvim.py')
+imp.load_source('jvim','jvim.py')
+import jvim
 
 # Jody needs wants ot have a hand at creating a custom python vim ide. 
 # he modify's the included jvim.conf file to include the options and features he wants his vim to have
-assert 'git.exe' in src.jvim.envars['gitexe']
+
+assert 'git.exe' in jvim.envars['gitexe']
+
 
 # he runs that app which takes him through every step of compiling the vim for windows
 
