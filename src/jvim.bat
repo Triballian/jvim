@@ -1,0 +1,2 @@
+python jvim.py
+pause
