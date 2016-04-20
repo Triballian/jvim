@@ -33,22 +33,34 @@ os.chdir('\\Users\\Noe\\workspace\\jvim\\src')
 import imp 
 imp.load_source('jvim','jvim.py')
 import jvim
+import unittest
 
-# Jody needs wants ot have a hand at creating a custom python vim ide. 
-# he modify's the included jvim.conf file to include the options and features he wants his vim to have
+class NewUserTest(unittest.TestCase):
+	
+	
 
-assert 'git.exe' in jvim.envars['gitexe']
+	def test_can_grab_conf_and_check_it_later(self):
+
+		# Jody needs wants ot have a hand at creating a custom python vim ide. 
+		# he modify's the included jvim.conf file to include the options and features he wants his vim to have
+
+		self.assertIn('git.exe',jvim.envars['gitexe'])
+		self.fail('Finish the test!')
 
 
-# he runs that app which takes him through every step of compiling the vim for windows
+		# he runs that app which takes him through every step of compiling the vim for windows
 
-# He sees the instructions for using the finished prduct to include creatng the directory and copying 
-# the file over to the appropriate directory, which the app check for the existance of and implements 
-# if it does not exist. 
+		# He sees the instructions for using the finished prduct to include creatng the directory and copying 
+		# the file over to the appropriate directory, which the app check for the existance of and implements 
+		# if it does not exist. 
 
-# the app askes the user if he wants to install the addons that he prefers to vim
-# the app installs the desired apps frome the vimrc located on githup, the location 
-# provided to the app by Jody
+		# the app askes the user if he wants to install the addons that he prefers to vim
+		# the app installs the desired apps frome the vimrc located on githup, the location 
+		# provided to the app by Jody
 
-# the apps clones and copies over the necessary file to the required location in jody's users directory
-# The apps fuctions differently if it detect that it is being run from a linux system
+		# the apps clones and copies over the necessary file to the required location in jody's users directory
+		# The apps fuctions differently if it detect that it is being run from a linux system
+
+if __name__ == '__main__':
+	pass
+	

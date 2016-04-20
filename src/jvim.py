@@ -23,7 +23,7 @@ SOFTWARE.
 
 Created on Apr 16, 2016
 
-@author: Noe
+@author: Noe De La Cruz
 
 '''
 import re
